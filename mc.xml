@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<mode_change domain="1" sync="0" old_offset="0" new_offset="0" peri="1">
+    <old_v>
+        <id>1</id>
+    </old_v>
+    <old_v>
+        <id>0</id>
+    </old_v>
+
+    <changed_v>
+        <id>2</id>
+        <period>10000000</period>
+        <budget>6000000</budget>
+    </changed_v>
+    <changed_v>
+        <id>3</id>
+        <period>10000000</period>
+        <budget>6000000</budget>
+    </changed_v>
+
+</mode_change>

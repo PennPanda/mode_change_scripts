@@ -1,0 +1,13 @@
+#!/bin/bash
+
+sudo xl cpupool-remove rtds
+sudo xl cpupool-create name=\"rtds\" sched=\"rtds\"
+sudo xl cpupool-cpu-remove Pool-0 3
+sudo xl cpupool-cpu-add rtds 3
+
+echo "init rtds pool is finished."
+
+sudo xl cpupool-migrate ubuntu1 rtds
+
+echo "migrating vm to rtds pool..."
+
