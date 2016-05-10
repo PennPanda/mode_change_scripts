@@ -1,0 +1,47 @@
+<?xml versdion="1.0"?>
+<request domain="2" cpu ="3">
+    <vcpu type="new" id="0">
+            <budget>2499900</budget>
+            <period>10000000</period>
+            <criticality>0</criticality>
+            <release_new>
+                <guard_new type="backlog">
+                    <time>3000000000</time>
+                    <size type="<=">1</size>
+                </guard_new>
+            </release_new>
+    </vcpu>
+    <vcpu type="new" id="2">
+            <budget>2499900</budget>
+            <period>10000000</period>
+            <criticality>0</criticality>
+            <release_new>
+                <guard_new type="backlog">
+                    <time>3000000000</time>
+                    <size type="<=">1</size>
+                </guard_new>
+            </release_new>
+    </vcpu>
+    <vcpu type="new" id="3">
+            <budget>2499900</budget>
+            <period>10000000</period>
+            <criticality>0</criticality>
+            <release_new>
+                <guard_new type="backlog">
+                    <time>3000000000</time>
+                    <size type="<=">1</size>
+                </guard_new>
+            </release_new>
+    </vcpu>
+    <vcpu type="new" id="1">
+            <budget>2499900</budget>
+            <period>10000000</period>
+            <criticality>0</criticality>
+            <release_new>
+                <guard_new type="backlog">
+                    <time>3000000000</time>
+                    <size type="<=">1</size>
+                </guard_new>
+            </release_new>
+    </vcpu>
+</request>

@@ -1,0 +1,10 @@
+#this script exeuctes all transitions in the target folder
+#!/bin/bash
+FILES=sys_xmls/*.xml
+for f in $FILES
+do
+    echo "making transition $f..."
+    sudo /usr/local/sbin/mc $f
+    sleep 1
+    
+done  

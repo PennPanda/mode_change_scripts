@@ -1,0 +1,8 @@
+CPU5  9981497892683 (+ )  rtds:vcpu_enable     [ dom:vcpu = 0x00020003 ]
+CPU5  9981848763933 (+ )  rtds:vcpu_enable     [ dom:vcpu = 0x00020000 ]
+CPU5  9981848805226 (+ )  rtds:vcpu_enable     [ dom:vcpu = 0x00020001 ]
+CPU5  9981848846366 (+ )  rtds:vcpu_enable     [ dom:vcpu = 0x00020002 ]
+CPU0  9982190104905 (+ )  rtds:vcpu_enable     [ dom:vcpu = 0x00020000 ]
+CPU0  9982190112615 (+ )  rtds:vcpu_enable     [ dom:vcpu = 0x00020001 ]
+CPU0  9982190119717 (+ )  rtds:vcpu_enable     [ dom:vcpu = 0x00020002 ]
+CPU0  9982190126928 (+ )  rtds:vcpu_enable     [ dom:vcpu = 0x00020003 ]

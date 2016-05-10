@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo /usr/local/sbin/mc ~/mode_change_scripts/sys_xmls/sys_trans0.xml

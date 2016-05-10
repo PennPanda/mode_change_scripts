@@ -1,0 +1,2 @@
+CPU4  9981465988464 (+ )  rtds:dis_running     [ dom:vcpu = 0x00020000, cur_deadline = 0x000002aa40dc4e69, cur_budget = 0x00000000002621b8 ]
+CPU2  9982042721896 (+ )  rtds:dis_running     [ dom:vcpu = 0x00020002, cur_deadline = 0x000002aa4aaa5a3d, cur_budget = 0x000000000026253c ]
