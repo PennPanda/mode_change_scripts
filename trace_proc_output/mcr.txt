@@ -1,4 +1,0 @@
-CPU4  9981465923184 (+ )  rtds:mcr
-CPU5  9981848643420 (+ )  rtds:mcr
-CPU0  9982190041145 (+ )  rtds:mcr
-CPU2  9982042646513 (+ )  rtds:mcr

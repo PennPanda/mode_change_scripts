@@ -1,1 +1,0 @@
-CPU2  9982042741616 (+ )  rtds:dis_not_running     [ dom:vcpu = 0x00020003 ]

@@ -1,4 +1,0 @@
-CPU4  9981465923831 (+ )  rtds:job_queued     [ dom:vcpu = 0x00020001, cur_deadline = 0x000002aa40dc5954, cur_budget = 0x00000000002621b8 ]
-CPU4  9981465924236 (+ )  rtds:job_queued     [ dom:vcpu = 0x00020002, cur_deadline = 0x000002aa40dc61cf, cur_budget = 0x00000000002621b8 ]
-CPU4  9981465924621 (+ )  rtds:job_queued     [ dom:vcpu = 0x00020003, cur_deadline = 0x000002aa40dc6a34, cur_budget = 0x00000000002621b8 ]
-CPU2  9982042647341 (+ )  rtds:job_queued     [ dom:vcpu = 0x00020003, cur_deadline = 0x000002aa4ac1c043, cur_budget = 0x0000000000231860 ]
