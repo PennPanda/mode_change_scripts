@@ -1,0 +1,52 @@
+<rules>
+    <vcpu type="new">
+        <release_new>
+            <guard_new type="backlog">
+                <time>3000000000</time>
+                <size type="<=">1</size>
+            </guard_new>
+        </release_new>
+    </vcpu>
+    <vcpu type="old">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="backlog">
+                <size type=">=">3</size>
+            </guard_old>
+        </disable_old>
+    </vcpu>
+    <vcpu type="unchanged">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="backlog">
+                <size type=">=">5</size>
+            </guard_old>
+        </disable_old>
+        <release_new>
+            <guard_new type="backlog">
+                <time>3000000000</time>
+                <size type="<=">1</size>
+            </guard_new>
+        </release_new>
+    </vcpu>
+    <vcpu type="changed">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="backlog">
+                <timer>1000000000</timer>
+                <time>1000000000</time>
+                <budget>3000000</budget>
+                <size type=">=">3</size>
+            </guard_old>
+        </disable_old>
+        <release_new>
+            <guard_new type="backlog">
+                <time>3000000000</time>
+                <size type="<=">5</size>
+            </guard_new>
+        </release_new>
+    </vcpu>
+</rules>

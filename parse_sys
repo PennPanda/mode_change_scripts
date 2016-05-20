@@ -1,5 +1,5 @@
 #!/bin/bash
 
-sudo /usr/local/sbin/mc_sys sys.xml ~/mode_change_scripts/sys_xmls/
+sudo /usr/local/sbin/mc_sys sys_rules.xml sys.xml ~/mode_change_scripts/sys_xmls/
 
 
