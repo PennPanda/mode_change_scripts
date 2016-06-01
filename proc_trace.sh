@@ -20,4 +20,4 @@ cat trace_proc_output/rtds | awk '$5 == "rtds:update_changed"' > trace_proc_outp
 
 cat trace_proc_output/rtds | awk '$5 == "rtds:backlog_satisfied"' > trace_proc_output/backlog.txt
 
-scp trace_proc_output/*.txt tim@home:~/modechange/
+#scp trace_proc_output/*.txt tim@home:~/modechange/

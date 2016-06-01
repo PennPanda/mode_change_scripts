@@ -3,18 +3,14 @@
 
 
 sudo xentrace -D -e 0x0002f000 trace.bin &
-sleep 0.03
+sleep 0.05
 #./changed
-./max_period_offset
-#sleep 0.3
-#./mode_change2
-sleep 0.07
-./mode_change2
-sleep 0.03
 ./disable_all
 sleep 0.03
 ./enable_all
 sleep 0.03
+./test
+sleep 0.07
 
 sudo killall xentrace
 

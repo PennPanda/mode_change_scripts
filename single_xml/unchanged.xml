@@ -1,8 +1,3 @@
-<!--async with periodicity
-Two unchanged vcpus
-Two changed vcpus  
-old period is 10ms
--->
 <?xml versdion="1.0"?>
 <request domain="2" cpu = "3">
     <vcpu type="unchanged" id="0">
@@ -12,8 +7,9 @@ old period is 10ms
        </disable_old>
         <release_new>
             <guard_new type="none"/>
-       </release_new>
-    </vcpu>
+        </release_new> 
+   </vcpu>
+
     <vcpu type="unchanged" id="1">
         <disable_old>
             <action_running_old>continue</action_running_old>
@@ -21,40 +17,24 @@ old period is 10ms
        </disable_old>
         <release_new>
             <guard_new type="none"/>
-       </release_new>
-    </vcpu>
-    <vcpu type="changed" id="2">
-        <disable_old>
-            <action_running_old>continue</action_running_old>
-            <action_not_running_old>continue</action_not_running_old>
-            <guard_old type="none">
-                <time>3000000000</time>
-                <budget>3000000</budget>
-                <size type=">=">1</size>
-            </guard_old>
-        </disable_old>
-        <release_new>
-            <guard_new type="timer">
-            <timer>10000000</timer>
-            </guard_new>
-       </release_new>
-       <budget>1000000</budget>
-       <period>5000000</period>
-       <criticality>0</criticality>
- 
-    </vcpu>
-    <vcpu type="changed" id="3">
+        </release_new> 
+   </vcpu>
+    <vcpu type="unchanged" id="2">
         <disable_old>
             <action_running_old>continue</action_running_old>
             <action_not_running_old>continue</action_not_running_old>
        </disable_old>
         <release_new>
-            <guard_new type="timer">
-            <timer>10000000</timer>
-            </guard_new>
-       </release_new>
-       <budget>1000000</budget>
-       <period>11000000</period>
-       <criticality>0</criticality>
+            <guard_new type="none"/>
+        </release_new> 
+    </vcpu>
+    <vcpu type="unchanged" id="3">
+         <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>       
+        <release_new>
+            <guard_new type="none"/>
+        </release_new>
     </vcpu>
 </request>
