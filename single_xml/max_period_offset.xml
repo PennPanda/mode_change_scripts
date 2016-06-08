@@ -1,20 +1,18 @@
 <!-- max period offset
-Two unchanged vcpus
+One unchanged vcpu
+One Old vcpu
 Two changed vcpus  
 max period is 11ms
 -->
 <?xml versdion="1.0"?>
 <request domain="2" cpu = "3">
-    <vcpu type="unchanged" id="0">
+    <vcpu type="old" id="1">
         <disable_old>
             <action_running_old>continue</action_running_old>
             <action_not_running_old>continue</action_not_running_old>
        </disable_old>
-        <release_new>
-            <guard_new type="none"/>
-       </release_new>
     </vcpu>
-    <vcpu type="unchanged" id="1">
+    <vcpu type="unchanged" id="0">
         <disable_old>
             <action_running_old>continue</action_running_old>
             <action_not_running_old>continue</action_not_running_old>

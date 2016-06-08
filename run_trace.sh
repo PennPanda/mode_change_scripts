@@ -3,10 +3,10 @@
 
 
 sudo xentrace -D -e 0x0002f000 trace.bin &
-sleep 0.05
+sleep 0.01
 #./changed
 ./disable_all
-sleep 0.03
+sleep 0.01
 ./enable_all
 sleep 0.03
 ./test

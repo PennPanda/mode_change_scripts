@@ -3,7 +3,7 @@
     <vcpu type="new" id="0">
         <budget>2499000</budget>
         <period>10000000</period>
-        <criticality>1</criticality>
+        <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
                 <timer>1000000000</timer>
@@ -16,7 +16,7 @@
     <vcpu type="new" id="1">
         <budget>2499000</budget>
         <period>10000000</period>
-        <criticality>1</criticality>
+        <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
                 <timer>1000000000</timer>
@@ -30,7 +30,7 @@
     <vcpu type="new" id="2">
         <budget>2499000</budget>
         <period>10000000</period>
-        <criticality>1</criticality>
+        <criticality>0</criticality>
          <release_new>
             <guard_new type="time">
                 <timer>1000000000</timer>
@@ -43,7 +43,7 @@
     <vcpu type="new" id="3">
         <budget>2499000</budget>
         <period>10000000</period>
-        <criticality>1</criticality>
+        <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
                 <timer>1000000000</timer>

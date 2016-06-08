@@ -1,29 +1,24 @@
-<!--async without periodicity
-Two unchanged vcpus
-Two changed vcpus  
-new job offsets are 10ms, 15ms
+<!-- minoffset without periodicity
+One unchanged vcpu
+One Old vcpu
+Two changed vcpus
 -->
 <?xml versdion="1.0"?>
 <request domain="2" cpu = "3">
+    <vcpu type="old" id="1">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+    </vcpu>
     <vcpu type="unchanged" id="0">
         <disable_old>
             <action_running_old>continue</action_running_old>
             <action_not_running_old>continue</action_not_running_old>
        </disable_old>
         <release_new>
-            <guard_new type="time">
-            <time>10000000</time>
-            </guard_new>
-       </release_new>
-    </vcpu>
-    <vcpu type="unchanged" id="1">
-        <disable_old>
-            <action_running_old>continue</action_running_old>
-            <action_not_running_old>continue</action_not_running_old>
-       </disable_old>
-        <release_new>
-            <guard_new type="time">
-            <time>10000000</time>
+            <guard_new type="backlog">
+                <size type="<=">0</size>
             </guard_new>
        </release_new>
     </vcpu>
@@ -31,21 +26,15 @@ new job offsets are 10ms, 15ms
         <disable_old>
             <action_running_old>continue</action_running_old>
             <action_not_running_old>continue</action_not_running_old>
-            <guard_old type="none">
-                <time>3000000000</time>
-                <budget>3000000</budget>
-                <size type=">=">1</size>
-            </guard_old>
         </disable_old>
         <release_new>
-            <guard_new type="time">
-            <time>15000000</time>
+            <guard_new type="backlog">
+                <size type="<=">0</size>
             </guard_new>
        </release_new>
        <budget>1000000</budget>
        <period>5000000</period>
        <criticality>0</criticality>
- 
     </vcpu>
     <vcpu type="changed" id="3">
         <disable_old>
@@ -53,8 +42,8 @@ new job offsets are 10ms, 15ms
             <action_not_running_old>continue</action_not_running_old>
        </disable_old>
         <release_new>
-            <guard_new type="time">
-            <time>15000000</time>
+            <guard_new type="backlog">
+                <size type="<=">0</size>
             </guard_new>
        </release_new>
        <budget>1000000</budget>
