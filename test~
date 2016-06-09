@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#sudo /usr/local/sbin/mc single_xml/max_period_offset.xml
+sudo /usr/local/sbin/mc single_xml/min_offset_no_peri.xml

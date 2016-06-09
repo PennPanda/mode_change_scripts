@@ -1,7 +1,7 @@
-<!--async with periodicity
+<!--async without periodicity
 Two unchanged vcpus
-Two changed vcpus  
-old period is 10ms
+Two changed vcpus. Old period is 10ms
+user defined delay is 15ms and 20ms
 -->
 <?xml versdion="1.0"?>
 <request domain="2" cpu = "3">
@@ -30,7 +30,7 @@ old period is 10ms
         </disable_old>
         <release_new>
             <guard_new type="timer">
-            <timer>10000000</timer>
+            <timer>15000000</timer>
             </guard_new>
        </release_new>
        <budget>1000000</budget>
@@ -45,7 +45,7 @@ old period is 10ms
        </disable_old>
         <release_new>
             <guard_new type="timer">
-            <timer>10000000</timer>
+            <timer>20000000</timer>
             </guard_new>
        </release_new>
        <budget>1000000</budget>
