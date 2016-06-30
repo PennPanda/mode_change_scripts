@@ -8,7 +8,7 @@ user defined delay is 15ms and 20ms
     <vcpu type="unchanged" id="0">
         <disable_old>
             <action_running_old>continue</action_running_old>
-            <action_not_running_old>continue</action_not_running_old>
+            <action_not_running_old dbudget="-1234" ddeadline="-2345">update</action_not_running_old>
        </disable_old>
         <release_new>
             <guard_new type="none"/>
@@ -17,7 +17,7 @@ user defined delay is 15ms and 20ms
     <vcpu type="unchanged" id="1">
         <disable_old>
             <action_running_old>continue</action_running_old>
-            <action_not_running_old>continue</action_not_running_old>
+            <action_not_running_old dbudget="-1234" ddeadline="-2345">update</action_not_running_old>
        </disable_old>
         <release_new>
             <guard_new type="none"/>
@@ -26,7 +26,7 @@ user defined delay is 15ms and 20ms
     <vcpu type="changed" id="2">
         <disable_old>
             <action_running_old>continue</action_running_old>
-            <action_not_running_old>continue</action_not_running_old>
+            <action_not_running_old dbudget="-1234" ddeadline="2345">update</action_not_running_old>
         </disable_old>
         <release_new>
             <guard_new type="timer">
@@ -41,7 +41,7 @@ user defined delay is 15ms and 20ms
     <vcpu type="changed" id="3">
         <disable_old>
             <action_running_old>continue</action_running_old>
-            <action_not_running_old>continue</action_not_running_old>
+            <action_not_running_old dbudget="-1234" ddeadline="2345">update</action_not_running_old>
        </disable_old>
         <release_new>
             <guard_new type="timer">
