@@ -5,11 +5,11 @@ echo saving this trace to $1
 
 cat trace.bin | xentrace_format ~/event_driven/event_driven/tools/xentrace/formats | grep "rtds" > $trace_proc_output/temp
 
-echo soriting
+#echo soriting
 sort -k 2 -n $trace_proc_output/temp > $trace_proc_output/rtds
-echo removing
+#echo removing
 rm $trace_proc_output/temp
-echo partiing
+#echo partioning
 
 cat $trace_proc_output/rtds | awk '$5 == "rtds:job_release"' > $trace_proc_output/release_job.txt
 

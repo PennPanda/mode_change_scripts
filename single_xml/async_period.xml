@@ -1,5 +1,6 @@
 <!--async with periodicity
-Two unchanged vcpus
+one unchanged vcpu
+one new vcpu
 Two changed vcpus  
 old period is 10ms
 -->
@@ -11,17 +12,20 @@ old period is 10ms
             <action_not_running_old>continue</action_not_running_old>
        </disable_old>
         <release_new>
-            <guard_new type="none"/>
+            <guard_new type="timer">
+                <timer>10000000</timer>
+            </guard_new>
        </release_new>
     </vcpu>
-    <vcpu type="unchanged" id="1">
-        <disable_old>
-            <action_running_old>continue</action_running_old>
-            <action_not_running_old>continue</action_not_running_old>
-       </disable_old>
+    <vcpu type="new" id="1">
         <release_new>
-            <guard_new type="none"/>
-       </release_new>
+            <guard_new type="time">
+                <time>1000000</time>
+            </guard_new>
+        </release_new>
+        <budget>1000000</budget>
+        <period>11000000</period>
+        <criticality>0</criticality>
     </vcpu>
     <vcpu type="changed" id="2">
         <disable_old>
@@ -38,18 +42,10 @@ old period is 10ms
        <criticality>0</criticality>
  
     </vcpu>
-    <vcpu type="changed" id="3">
+    <vcpu type="old" id="3">
         <disable_old>
             <action_running_old>continue</action_running_old>
             <action_not_running_old>continue</action_not_running_old>
        </disable_old>
-        <release_new>
-            <guard_new type="timer">
-            <timer>10000000</timer>
-            </guard_new>
-       </release_new>
-       <budget>1000000</budget>
-       <period>11000000</period>
-       <criticality>0</criticality>
     </vcpu>
 </request>
