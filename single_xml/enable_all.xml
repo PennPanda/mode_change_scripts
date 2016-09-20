@@ -1,5 +1,5 @@
 <?xml versdion="1.0"?>
-<request domain="2" cpu = "3">
+<request domain="2" cpu = "3" mode_id = "1">
     <vcpu type="new" id="0">
         <budget>2500000</budget>
         <period>10000000</period>

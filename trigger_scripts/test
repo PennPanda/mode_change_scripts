@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#mode 3 is the actual test
+sudo /usr/local/sbin/mc_trigger 2 3

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo /usr/local/sbin/mc single_xml/pre_async_period.xml 2

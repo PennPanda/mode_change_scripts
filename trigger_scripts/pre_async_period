@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#mode 2 is the async_period pre mode
+sudo /usr/local/sbin/mc_trigger 2 2

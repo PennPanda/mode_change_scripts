@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#mode 0 has all vcpu disabled
+sudo /usr/local/sbin/mc_trigger 2 0

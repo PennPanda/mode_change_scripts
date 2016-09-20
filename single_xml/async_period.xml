@@ -5,7 +5,7 @@ Two changed vcpus
 old period is 10ms
 -->
 <?xml versdion="1.0"?>
-<request domain="2" cpu = "3">
+<request domain="2" cpu = "3" mode_id = "2">
     <vcpu type="unchanged" id="0">
         <disable_old>
             <action_running_old>continue</action_running_old>

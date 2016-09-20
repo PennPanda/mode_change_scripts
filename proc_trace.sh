@@ -14,7 +14,7 @@ rm $trace_proc_output/temp
 cat $trace_proc_output/rtds | awk '$5 == "rtds:job_release"' > $trace_proc_output/release_job.txt
 
 cat $trace_proc_output/rtds | awk '$5 == "rtds:schedule"' > $trace_proc_output/schedule.txt
- 
+
 cat $trace_proc_output/rtds | awk '$5 == "rtds:dis_running"' > $trace_proc_output/dis_running.txt
 
 cat $trace_proc_output/rtds | awk '$5 == "rtds:dis_not_running"' > $trace_proc_output/dis_not_running.txt
@@ -28,5 +28,13 @@ cat $trace_proc_output/rtds | awk '$5 == "rtds:job_queued"' > $trace_proc_output
 cat $trace_proc_output/rtds | awk '$5 == "rtds:update_changed"' > $trace_proc_output/update_changed.txt
 
 cat $trace_proc_output/rtds | awk '$5 == "rtds:backlog_satisfied"' > $trace_proc_output/backlog.txt
+
+cat $trace_proc_output/rtds | awk '$5 == "rtds:sched_time"' > $trace_proc_output/sched_time.txt
+
+cat $trace_proc_output/rtds | awk '$5 == "rtds:context_time"' > $trace_proc_output/context_time.txt
+
+cat $trace_proc_output/rtds | awk '$5 == "rtds:mc_time"' > $trace_proc_output/time.txt
+
+cat $trace_proc_output/rtds | awk '$5 == "rtds:repl_time"' > $trace_proc_output/repl_time.txt
 
 #scp trace_proc_output/*.txt tim@home:~/modechange/
