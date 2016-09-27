@@ -1,0 +1,58 @@
+<!-- max period offset
+One unchanged vcpu
+One Old vcpu
+Two changed vcpus  
+max period is 11ms
+-->
+<?xml versdion="1.0"?>
+<request domain="2" cpu = "3">
+    <vcpu type="old" id="1">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+    </vcpu>
+    <vcpu type="unchanged" id="0">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+        <release_new>
+            <guard_new type="none"/>
+       </release_new>
+    </vcpu>
+    <vcpu type="changed" id="2">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+            <guard_old type="none">
+                <time>3000000000</time>
+                <budget>3000000</budget>
+                <size type=">=">1</size>
+            </guard_old>
+        </disable_old>
+        <release_new>
+            <guard_new type="time">
+            <time>11000000</time>
+            </guard_new>
+       </release_new>
+       <budget>1000000</budget>
+       <period>5000000</period>
+       <criticality>0</criticality>
+ 
+    </vcpu>
+    <vcpu type="changed" id="3">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+        <release_new>
+            <guard_new type="time">
+            <time>11000000</time>
+            </guard_new>
+       </release_new>
+       <budget>1000000</budget>
+       <period>11000000</period>
+       <criticality>0</criticality>
+    </vcpu>
+</request>

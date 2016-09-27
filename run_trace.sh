@@ -1,13 +1,13 @@
 #/bin/bash
-
+nr_vcpu=4;
 #load the modes into the hypervisor
-load_scripts/load_disable_all_mode #0
-load_scripts/load_enable_all_mode #1
-load_scripts/load_pre_async_period_mode #2
-load_scripts/load_test_mode #3
+load_scripts/load_disable_all_mode $nr_vcpu #0
+load_scripts/load_enable_all_mode $nr_vcpu #1
+load_scripts/load_pre_async_period_mode $nr_vcpu #2
+load_scripts/load_test_mode $nr_vcpu #3
 
 
-for ((i=0;i<2;i++))
+for ((i=0;i<30;i++))
 do
     sleep 0.01
 #./changed

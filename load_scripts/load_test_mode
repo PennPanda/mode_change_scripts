@@ -4,7 +4,7 @@
 #sudo /usr/local/sbin/mc single_xml/min_offset_no_peri.xml
 #sudo /usr/local/sbin/mc single_xml/min_offset_with_peri.xml
 #sudo /usr/local/sbin/mc single_xml/async_no_period.xml
-sudo /usr/local/sbin/mc single_xml/async_period.xml 3
+sudo /usr/local/sbin/mc single_xml/v$1/async_period.xml 3
 #sleep 0.5
 #sudo /usr/local/sbin/mc single_xml/disable_all.xml
 

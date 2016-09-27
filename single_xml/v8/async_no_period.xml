@@ -1,0 +1,55 @@
+<!--async without periodicity
+Two unchanged vcpus
+Two changed vcpus. Old period is 10ms
+user defined delay is 15ms and 20ms
+-->
+<?xml versdion="1.0"?>
+<request domain="2" cpu = "3">
+    <vcpu type="unchanged" id="0">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old dbudget="-1234" ddeadline="-2345">update</action_not_running_old>
+       </disable_old>
+        <release_new>
+            <guard_new type="none"/>
+       </release_new>
+    </vcpu>
+    <vcpu type="unchanged" id="1">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old dbudget="-1234" ddeadline="-2345">update</action_not_running_old>
+       </disable_old>
+        <release_new>
+            <guard_new type="none"/>
+       </release_new>
+    </vcpu>
+    <vcpu type="changed" id="2">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old dbudget="-1234" ddeadline="2345">update</action_not_running_old>
+        </disable_old>
+        <release_new>
+            <guard_new type="timer">
+            <timer>15000000</timer>
+            </guard_new>
+       </release_new>
+       <budget>1000000</budget>
+       <period>5000000</period>
+       <criticality>0</criticality>
+ 
+    </vcpu>
+    <vcpu type="changed" id="3">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old dbudget="-1234" ddeadline="2345">update</action_not_running_old>
+       </disable_old>
+        <release_new>
+            <guard_new type="timer">
+            <timer>20000000</timer>
+            </guard_new>
+       </release_new>
+       <budget>1000000</budget>
+       <period>11000000</period>
+       <criticality>0</criticality>
+    </vcpu>
+</request>
