@@ -37,4 +37,7 @@ cat $trace_proc_output/rtds | awk '$5 == "rtds:mc_time"' > $trace_proc_output/ti
 
 cat $trace_proc_output/rtds | awk '$5 == "rtds:repl_time"' > $trace_proc_output/repl_time.txt
 
+
+
+cp mode_change_info_matlab $trace_proc_output/
 #scp trace_proc_output/*.txt tim@home:~/modechange/
