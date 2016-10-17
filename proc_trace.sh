@@ -33,7 +33,7 @@ cat $trace_proc_output/rtds | awk '$5 == "rtds:sched_time"' > $trace_proc_output
 
 cat $trace_proc_output/rtds | awk '$5 == "rtds:context_time"' > $trace_proc_output/context_time.txt
 
-cat $trace_proc_output/rtds | awk '$5 == "rtds:mc_time"' > $trace_proc_output/time.txt
+cat $trace_proc_output/rtds | awk '$5 == "rtds:mc_time"' > $trace_proc_output/mc_time.txt
 
 cat $trace_proc_output/rtds | awk '$5 == "rtds:repl_time"' > $trace_proc_output/repl_time.txt
 

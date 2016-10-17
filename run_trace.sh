@@ -1,11 +1,16 @@
 #/bin/bash
-nr_vcpu=8;
+nr_vcpu=0;
+nr_vcpu=$1;
+if [[ "$nr_vcpu" -eq 0 ]]; then
+    echo 'enter nr_vcpu'
+    exit 0
+fi
+echo protocol with $nr_vcpu vcpu
 #load the modes into the hypervisor
 load_scripts/load_disable_all_mode $nr_vcpu #0
 load_scripts/load_enable_all_mode $nr_vcpu #1
 load_scripts/load_pre_async_period_mode $nr_vcpu #2
 load_scripts/load_test_mode $nr_vcpu > mode_change_info_matlab #3
-
 
 
 for ((i=0;i<30;i++))
