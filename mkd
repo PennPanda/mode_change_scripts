@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for (( i = 0; i<30; i++ ))
+for (( i = 0; i<100; i++ ))
 do
     mkdir trace_proc_output/test$i
 done

@@ -13,7 +13,7 @@ load_scripts/load_pre_async_period_mode $nr_vcpu #2
 load_scripts/load_test_mode $nr_vcpu > mode_change_info_matlab #3
 
 
-for ((i=0;i<30;i++))
+for ((i=0;i<100;i++))
 do
     sleep 0.01
 #./changed
@@ -28,7 +28,7 @@ do
     sudo xentrace -D -e 0x0002f000 trace.bin &
     sleep 0.02
     trigger_scripts/test
-    sleep 0.05
+    sleep 0.03
 
     sudo killall xentrace
     sleep 0.02
