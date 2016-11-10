@@ -1,4 +1,5 @@
 *.bin
 *.txt
 sys_xmls/*
+test_xmls/*
 trace_proc_output/*
