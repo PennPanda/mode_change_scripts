@@ -1,0 +1,15 @@
+<sys cpu="3" domain="2">
+    <mode id="0">
+        <vcpu id="0" budget="2500000" period="10000000" criticality="0"/>
+        <vcpu id="1" budget="2500000" period="10000000" criticality="0"/>
+        <vcpu id="2" budget="2500000" period="10000000" criticality="0"/>
+        <vcpu id="3" budget="2500000" period="10000000" criticality="0"/>
+    </mode>
+    <mode id="1">
+        <vcpu id="1" budget="4430000" period="17720000" criticality="0"/>
+        <vcpu id="0" budget="4800000" period="19200000" criticality="0"/>
+        <vcpu id="2" budget="100000" period="400000" criticality="0"/>
+        <vcpu id="3" budget="4220000" period="16880000" criticality="0"/>
+    </mode>
+    <trans id="0" src="0" dst="1"/>
+</sys>

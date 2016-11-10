@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/usr/local/sbin/mc_gen 4 ~/mode_change_scripts/test_xmls/ 4
+

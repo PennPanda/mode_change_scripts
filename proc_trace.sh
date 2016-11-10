@@ -7,6 +7,7 @@ cat trace.bin | xentrace_format ~/event_driven/event_driven/tools/xentrace/forma
 
 #echo soriting
 sort -k 2 -n $trace_proc_output/temp > $trace_proc_output/rtds
+echo done sorting
 #echo removing
 rm $trace_proc_output/temp
 #echo partioning
@@ -37,7 +38,7 @@ cat $trace_proc_output/rtds | awk '$5 == "rtds:mc_time"' > $trace_proc_output/mc
 
 cat $trace_proc_output/rtds | awk '$5 == "rtds:repl_time"' > $trace_proc_output/repl_time.txt
 
-
+cat $trace_proc_output/rtds | awk '$5 == "rtds:unrunnable"' > $trace_proc_output/unrunnable.txt
 
 cp mode_change_info_matlab $trace_proc_output/
 #scp trace_proc_output/*.txt tim@home:~/modechange/
