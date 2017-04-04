@@ -1,5 +1,6 @@
+<!-- 16 vcpu, (50ms,3ms)-->
 <?xml versdion="1.0"?>
-<request domain="2" cpu = "3">
+<request cpu = "3">
     <vcpu type="old" id="1">
         <disable_old>
             <action_running_old>abort</action_running_old>

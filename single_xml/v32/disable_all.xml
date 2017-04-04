@@ -1,5 +1,5 @@
 <?xml versdion="1.0"?>
-<request domain="2" cpu = "3">
+<request cpu = "3">
     <vcpu type="old" id="0">
         <disable_old>
             <action_running_old>abort</action_running_old>
@@ -172,6 +172,188 @@
         </disable_old>
     </vcpu>
     <vcpu type="old" id="15">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="budget">
+                <time>1000000000</time>
+                <budget type="<=">5000000</budget>
+                <size type=">=">0</size>
+            </guard_old>
+        </disable_old>
+    </vcpu>
+    <vcpu type="old" id="16">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="budget">
+                <timer>1000000000</timer>
+                <time>1000000000</time>
+                <budget type="<=">5000000</budget>
+                <size type=">=">0</size>
+            </guard_old>
+        </disable_old>
+    </vcpu>
+    <vcpu type="old" id="17">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="budget">
+                <time>2000000000</time>
+                <budget type="<=">5000000</budget>
+                <size type=">=">0</size>
+            </guard_old>
+        </disable_old>
+    </vcpu>
+    <vcpu type="old" id="18">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="budget">
+                <time>3000000000</time>
+                <budget type="<=">5000000</budget>
+                <size type=">=">0</size>
+            </guard_old>
+        </disable_old>
+    </vcpu>
+    <vcpu type="old" id="19">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="budget">
+                <time>1000000000</time>
+                <budget type="<=">5000000</budget>
+                <size type=">=">0</size>
+            </guard_old>
+        </disable_old>
+    </vcpu>
+
+    <vcpu type="old" id="20">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="budget">
+                <timer>1000000000</timer>
+                <time>1000000000</time>
+                <budget type="<=">5000000</budget>
+                <size type=">=">0</size>
+            </guard_old>
+        </disable_old>
+    </vcpu>
+    <vcpu type="old" id="21">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="budget">
+                <time>2000000000</time>
+                <budget type="<=">5000000</budget>
+                <size type=">=">0</size>
+            </guard_old>
+        </disable_old>
+    </vcpu>
+    <vcpu type="old" id="22">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="budget">
+                <time>3000000000</time>
+                <budget type="<=">5000000</budget>
+                <size type=">=">0</size>
+            </guard_old>
+        </disable_old>
+    </vcpu>
+    <vcpu type="old" id="23">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="budget">
+                <time>1000000000</time>
+                <budget type="<=">5000000</budget>
+                <size type=">=">0</size>
+            </guard_old>
+        </disable_old>
+    </vcpu>
+    <vcpu type="old" id="24">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="budget">
+                <timer>1000000000</timer>
+                <time>1000000000</time>
+                <budget type="<=">5000000</budget>
+                <size type=">=">0</size>
+            </guard_old>
+        </disable_old>
+    </vcpu>
+    <vcpu type="old" id="25">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="budget">
+                <time>2000000000</time>
+                <budget type="<=">5000000</budget>
+                <size type=">=">0</size>
+            </guard_old>
+        </disable_old>
+    </vcpu>
+    <vcpu type="old" id="26">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="budget">
+                <time>3000000000</time>
+                <budget type="<=">5000000</budget>
+                <size type=">=">0</size>
+            </guard_old>
+        </disable_old>
+    </vcpu>
+    <vcpu type="old" id="27">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="budget">
+                <time>1000000000</time>
+                <budget type="<=">5000000</budget>
+                <size type=">=">0</size>
+            </guard_old>
+        </disable_old>
+    </vcpu>
+
+    <vcpu type="old" id="28">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="budget">
+                <timer>1000000000</timer>
+                <time>1000000000</time>
+                <budget type="<=">5000000</budget>
+                <size type=">=">0</size>
+            </guard_old>
+        </disable_old>
+    </vcpu>
+    <vcpu type="old" id="29">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="budget">
+                <time>2000000000</time>
+                <budget type="<=">5000000</budget>
+                <size type=">=">0</size>
+            </guard_old>
+        </disable_old>
+    </vcpu>
+    <vcpu type="old" id="30">
+        <disable_old>
+            <action_running_old>abort</action_running_old>
+            <action_not_running_old>guard</action_not_running_old>
+            <guard_old type="budget">
+                <time>3000000000</time>
+                <budget type="<=">5000000</budget>
+                <size type=">=">0</size>
+            </guard_old>
+        </disable_old>
+    </vcpu>
+    <vcpu type="old" id="31">
         <disable_old>
             <action_running_old>abort</action_running_old>
             <action_not_running_old>guard</action_not_running_old>

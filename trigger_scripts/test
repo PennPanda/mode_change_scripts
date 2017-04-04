@@ -1,4 +1,5 @@
 #!/bin/bash
 
 #mode 3 is the actual test
-sudo /usr/local/sbin/mc_trigger 2 3
+ID=get_ubuntu1_id
+sudo /usr/local/sbin/mc_trigger $ID 3

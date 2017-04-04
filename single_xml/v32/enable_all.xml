@@ -1,8 +1,8 @@
 <?xml versdion="1.0"?>
-<request domain="2" cpu = "3">
+<request cpu = "3">
     <vcpu type="new" id="0">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -14,8 +14,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="1">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -28,8 +28,8 @@
 
     </vcpu>
     <vcpu type="new" id="2">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
          <release_new>
             <guard_new type="time">
@@ -41,8 +41,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="3">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -54,8 +54,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="4">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -67,8 +67,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="5">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -81,8 +81,8 @@
 
     </vcpu>
     <vcpu type="new" id="6">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
          <release_new>
             <guard_new type="time">
@@ -94,8 +94,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="7">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -107,8 +107,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="8">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -120,8 +120,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="9">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -134,8 +134,8 @@
 
     </vcpu>
     <vcpu type="new" id="10">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
          <release_new>
             <guard_new type="time">
@@ -147,8 +147,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="11">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -160,8 +160,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="12">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -173,8 +173,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="13">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -187,8 +187,8 @@
 
     </vcpu>
     <vcpu type="new" id="14">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
          <release_new>
             <guard_new type="time">
@@ -200,8 +200,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="15">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -213,8 +213,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="16">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -226,8 +226,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="17">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -240,8 +240,8 @@
 
     </vcpu>
     <vcpu type="new" id="18">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
          <release_new>
             <guard_new type="time">
@@ -253,8 +253,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="19">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -266,8 +266,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="20">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -279,8 +279,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="21">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -293,8 +293,8 @@
 
     </vcpu>
     <vcpu type="new" id="22">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
          <release_new>
             <guard_new type="time">
@@ -306,8 +306,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="23">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -319,8 +319,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="24">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -332,8 +332,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="25">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -346,8 +346,8 @@
 
     </vcpu>
     <vcpu type="new" id="26">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
          <release_new>
             <guard_new type="time">
@@ -359,8 +359,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="27">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -372,8 +372,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="28">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -385,8 +385,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="29">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">
@@ -399,8 +399,8 @@
 
     </vcpu>
     <vcpu type="new" id="30">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
          <release_new>
             <guard_new type="time">
@@ -412,8 +412,8 @@
         </release_new>
     </vcpu>
     <vcpu type="new" id="31">
-        <budget>312000</budget>
-        <period>10000000</period>
+        <budget>1500000</budget>
+        <period>50000000</period>
         <criticality>0</criticality>
         <release_new>
             <guard_new type="time">

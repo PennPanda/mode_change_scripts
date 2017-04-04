@@ -1,3 +1,16 @@
 #!/bin/bash
+domid=0;
+domid=$2
+transid=-1;
+transid=$3;
 
-sudo /usr/local/sbin/mc single_xml/v$1/pre_async_period.xml 2
+if [[ "$domid" -eq 0 ]]; then
+    echo 'enter domid'
+    exit 0
+fi
+if [[ "$transid" -eq -1 ]]; then
+    echo 'enter transtion id'
+    exit 0
+fi
+
+sudo /usr/local/sbin/mc single_xml/v$1/pre_async_period.xml $3 $2

@@ -6,8 +6,21 @@
         <vcpu id="3" budget="2500000" period="10000000" criticality="0"/>
     </mode>
     <mode id="1">
-        <vcpu id="1" budget="310000" period="1240000" criticality="0"/>
-        <vcpu id="0" budget="970000" period="3880000" criticality="0"/>
+        <vcpu id="2" budget="1970000" period="7880000" criticality="0"/>
+        <vcpu id="0" budget="3590000" period="14360000" criticality="0"/>
+        <vcpu id="1" budget="3470000" period="13880000" criticality="0"/>
+    </mode>
+    <mode id="2">
+        <vcpu id="1" budget="3780000" period="15120000" criticality="0"/>
+        <vcpu id="0" budget="2690000" period="10760000" criticality="0"/>
+        <vcpu id="2" budget="2190000" period="8760000" criticality="0"/>
+    </mode>
+    <mode id="3">
+        <vcpu id="0" budget="2240000" period="8960000" criticality="0"/>
     </mode>
     <trans id="0" src="0" dst="1"/>
+    <trans id="1" src="0" dst="2"/>
+    <trans id="2" src="0" dst="3"/>
+    <trans id="3" src="1" dst="2"/>
+    <trans id="4" src="1" dst="3"/>
 </sys>

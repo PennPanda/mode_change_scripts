@@ -6,33 +6,52 @@ if [[ "$nr_vcpu" -eq 0 ]]; then
     exit 0
 fi
 echo protocol with $nr_vcpu vcpu
-#load the modes into the hypervisor
-load_scripts/load_disable_all_mode $nr_vcpu #0
-load_scripts/load_enable_all_mode $nr_vcpu #1
-load_scripts/load_pre_async_period_mode $nr_vcpu #2
-load_scripts/load_test_mode $nr_vcpu > mode_change_info_matlab #3
 
+ID=$(sudo xl list | awk '$1 == "ubuntu1"' | awk '{print $2}')
 
-for ((i=0;i<100;i++))
+echo domain id is $ID
+#load the transitions into the hypervisor
+load_scripts/load_disable_all_mode $nr_vcpu $ID 0 #0
+load_scripts/load_enable_all_mode $nr_vcpu $ID 1 #1
+sleep 1
+load_scripts/load_pre_async_period_mode $nr_vcpu $ID 2 #2
+load_scripts/load_test_mode $nr_vcpu $ID 3 > mode_change_info_matlab #3
+
+#prepare the initial state
+#disable all
+sudo /usr/local/sbin/mc_trigger $ID 0
+sudo xl debug-keys r && xl dmesg | tail -n 20
+
+sleep 1
+
+#enable_all
+sudo /usr/local/sbin/mc_trigger $ID 1
+sleep 0.5
+sudo xl debug-keys r && xl dmesg | tail -n 20
+#sleep 100
+
+for ((i=0;i<1000;i++))
 do
     sleep 0.01
-#./changed
-    trigger_scripts/disable_all
-    sleep 0.1
-    trigger_scripts/enable_all
-    sleep 0.1
-
-    trigger_scripts/pre_async_period
-    sleep 0.1
+    #/pre_async_period
+    sudo /usr/local/sbin/mc_trigger $ID 2
+    sleep 0.08
 
     sudo xentrace -D -e 0x0002f000 trace.bin &
-    sleep 0.02
-    trigger_scripts/test
-    sleep 0.03
+    sleep 0.1
+    sudo /usr/local/sbin/mc_trigger $ID 3
+    sleep 0.1
 
     sudo killall xentrace
-    sleep 0.02
+    #disable_all
+    sudo /usr/local/sbin/mc_trigger $ID 0
+
     ./proc_trace.sh trace_proc_output/test$i
+
+    #enable_all
+    sudo /usr/local/sbin/mc_trigger $ID 1
+    sleep 0.05
+
     echo "done test$i"
 done
 

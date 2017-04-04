@@ -2,10 +2,12 @@
 one unchanged vcpu
 one new vcpu
 Two changed vcpus  
-old period is 10ms
+old period is 50ms
+budget default is 6ms
+offset for new task is 5ms
 -->
 <?xml versdion="1.0"?>
-<request domain="2" cpu = "3" mode_id = "2">
+<request cpu = "3">
     <vcpu type="unchanged" id="0">
         <disable_old>
             <action_running_old>continue</action_running_old>
@@ -13,18 +15,18 @@ old period is 10ms
        </disable_old>
         <release_new>
             <guard_new type="timer">
-                <timer>10000000</timer>
+                <timer>50000000</timer>
             </guard_new>
        </release_new>
     </vcpu>
     <vcpu type="new" id="1">
         <release_new>
             <guard_new type="time">
-                <time>1000000</time>
+                <time>5000000</time>
             </guard_new>
         </release_new>
-        <budget>1000000</budget>
-        <period>11000000</period>
+        <budget>6000000</budget>
+        <period>51000000</period>
         <criticality>0</criticality>
     </vcpu>
     <vcpu type="changed" id="2">
@@ -34,11 +36,11 @@ old period is 10ms
         </disable_old>
         <release_new>
             <guard_new type="timer">
-            <timer>10000000</timer>
+            <timer>50000000</timer>
             </guard_new>
        </release_new>
-       <budget>1000000</budget>
-       <period>9000000</period>
+       <budget>6000000</budget>
+       <period>49000000</period>
        <criticality>0</criticality>
  
     </vcpu>
@@ -55,18 +57,18 @@ old period is 10ms
        </disable_old>
         <release_new>
             <guard_new type="timer">
-                <timer>10000000</timer>
+                <timer>50000000</timer>
             </guard_new>
        </release_new>
     </vcpu>
     <vcpu type="new" id="5">
         <release_new>
             <guard_new type="time">
-                <time>1000000</time>
+                <time>5000000</time>
             </guard_new>
         </release_new>
-        <budget>1000000</budget>
-        <period>11000000</period>
+        <budget>6000000</budget>
+        <period>51000000</period>
         <criticality>0</criticality>
     </vcpu>
     <vcpu type="changed" id="6">
@@ -76,11 +78,11 @@ old period is 10ms
         </disable_old>
         <release_new>
             <guard_new type="timer">
-            <timer>10000000</timer>
+            <timer>50000000</timer>
             </guard_new>
        </release_new>
-       <budget>1000000</budget>
-       <period>9000000</period>
+       <budget>6000000</budget>
+       <period>49000000</period>
        <criticality>0</criticality>
  
     </vcpu>

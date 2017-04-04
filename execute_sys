@@ -1,20 +1,27 @@
 #this script exeuctes all transitions in the target folder
+#assuming the first mode has everything enabled!
 #!/bin/bash
 FILES=sys_xmls/*.xml
-
-sudo xentrace -D -e 0x0002f000 trace.bin &
-
-sleep 0.03
 
 i=0
 for f in $FILES
 do
-    echo "making transition $f..."
+    echo "loading transition $f..."
     sudo /usr/local/sbin/mc $f $i
+    i = i+1
+    sleep 0.01
+done
+
+i=0
+#sudo xentrace -D -e 0x0002f000 trace.bin &
+sleep 0.03
+
+do
+    echo "making transition $f..."
+    sudo /usr/local/sbin/mc_trigger $i
     i = i+1
     sleep 0.05
 done
-
-sudo killall xentrace
+#sudo killall xentrace
 
 ./proc_trace.sh

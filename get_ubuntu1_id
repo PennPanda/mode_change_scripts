@@ -1,0 +1,3 @@
+#!/bin/bash
+ID=$(sudo xl list | awk '$1 == "ubuntu1"' | awk '{print $2}')
+echo $ID
