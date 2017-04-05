@@ -1,55 +1,347 @@
-<!--async without periodicity
-Two unchanged vcpus
-Two changed vcpus. Old period is 10ms
-user defined delay is 15ms and 20ms
+<!--async with periodicity
+one unchanged vcpu
+one new vcpu
+Two changed vcpus  
+old period is 50ms
+offset for new task is 5ms
 -->
 <?xml versdion="1.0"?>
-<request domain="2" cpu = "3">
+<request cpu = "3">
     <vcpu type="unchanged" id="0">
         <disable_old>
             <action_running_old>continue</action_running_old>
-            <action_not_running_old dbudget="-1234" ddeadline="-2345">update</action_not_running_old>
+            <action_not_running_old>continue</action_not_running_old>
        </disable_old>
         <release_new>
-            <guard_new type="none"/>
+            <guard_new type="timer">
+                <timer>5000000</timer>
+            </guard_new>
        </release_new>
     </vcpu>
-    <vcpu type="unchanged" id="1">
-        <disable_old>
-            <action_running_old>continue</action_running_old>
-            <action_not_running_old dbudget="-1234" ddeadline="-2345">update</action_not_running_old>
-       </disable_old>
+    <vcpu type="new" id="1">
         <release_new>
-            <guard_new type="none"/>
-       </release_new>
+            <guard_new type="time">
+                <timer>5000000</timer>
+            </guard_new>
+        </release_new>
+        <budget>1500000</budget>
+        <period>50000000</period>
+        <criticality>0</criticality>
     </vcpu>
     <vcpu type="changed" id="2">
         <disable_old>
             <action_running_old>continue</action_running_old>
-            <action_not_running_old dbudget="-1234" ddeadline="2345">update</action_not_running_old>
+            <action_not_running_old>continue</action_not_running_old>
         </disable_old>
         <release_new>
             <guard_new type="timer">
-            <timer>15000000</timer>
+            <timer>5000000</timer>
             </guard_new>
        </release_new>
-       <budget>1000000</budget>
-       <period>5000000</period>
+       <budget>1500000</budget>
+       <period>49000000</period>
        <criticality>0</criticality>
  
     </vcpu>
-    <vcpu type="changed" id="3">
+    <vcpu type="old" id="3">
         <disable_old>
             <action_running_old>continue</action_running_old>
-            <action_not_running_old dbudget="-1234" ddeadline="2345">update</action_not_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+    </vcpu>
+    <vcpu type="unchanged" id="4">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
        </disable_old>
         <release_new>
             <guard_new type="timer">
-            <timer>20000000</timer>
+                <timer>5000000</timer>
             </guard_new>
        </release_new>
-       <budget>1000000</budget>
-       <period>11000000</period>
-       <criticality>0</criticality>
     </vcpu>
+    <vcpu type="new" id="5">
+        <release_new>
+            <guard_new type="time">
+                <timer>5000000</timer>
+            </guard_new>
+        </release_new>
+        <budget>1500000</budget>
+        <period>51000000</period>
+        <criticality>0</criticality>
+    </vcpu>
+    <vcpu type="changed" id="6">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+        </disable_old>
+        <release_new>
+            <guard_new type="timer">
+            <timer>5000000</timer>
+            </guard_new>
+       </release_new>
+       <budget>1500000</budget>
+       <period>49000000</period>
+       <criticality>0</criticality>
+ 
+    </vcpu>
+    <vcpu type="old" id="7">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+    </vcpu>
+    <vcpu type="unchanged" id="8">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+        <release_new>
+            <guard_new type="timer">
+                <timer>5000000</timer>
+            </guard_new>
+       </release_new>
+    </vcpu>
+    <vcpu type="new" id="9">
+        <release_new>
+            <guard_new type="time">
+                <timer>5000000</timer>
+            </guard_new>
+        </release_new>
+        <budget>1500000</budget>
+        <period>50000000</period>
+        <criticality>0</criticality>
+    </vcpu>
+    <vcpu type="changed" id="10">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+        </disable_old>
+        <release_new>
+            <guard_new type="timer">
+            <timer>5000000</timer>
+            </guard_new>
+       </release_new>
+       <budget>1500000</budget>
+       <period>49000000</period>
+       <criticality>0</criticality>
+ 
+    </vcpu>
+    <vcpu type="old" id="11">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+    </vcpu>
+    <vcpu type="unchanged" id="12">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+        <release_new>
+            <guard_new type="timer">
+                <timer>5000000</timer>
+            </guard_new>
+       </release_new>
+    </vcpu>
+    <vcpu type="new" id="13">
+        <release_new>
+            <guard_new type="time">
+                <timer>5000000</timer>
+            </guard_new>
+        </release_new>
+        <budget>1500000</budget>
+        <period>51000000</period>
+        <criticality>0</criticality>
+    </vcpu>
+    <vcpu type="changed" id="14">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+        </disable_old>
+        <release_new>
+            <guard_new type="timer">
+            <timer>5000000</timer>
+            </guard_new>
+       </release_new>
+       <budget>1500000</budget>
+       <period>49000000</period>
+       <criticality>0</criticality>
+ 
+    </vcpu>
+    <vcpu type="old" id="15">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+    </vcpu>
+    <vcpu type="unchanged" id="16">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+        <release_new>
+            <guard_new type="timer">
+                <timer>5000000</timer>
+            </guard_new>
+       </release_new>
+    </vcpu>
+    <vcpu type="new" id="17">
+        <release_new>
+            <guard_new type="time">
+                <timer>5000000</timer>
+            </guard_new>
+        </release_new>
+        <budget>1500000</budget>
+        <period>50000000</period>
+        <criticality>0</criticality>
+    </vcpu>
+    <vcpu type="changed" id="18">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+        </disable_old>
+        <release_new>
+            <guard_new type="timer">
+            <timer>5000000</timer>
+            </guard_new>
+       </release_new>
+       <budget>1500000</budget>
+       <period>49000000</period>
+       <criticality>0</criticality>
+ 
+    </vcpu>
+    <vcpu type="old" id="19">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+    </vcpu>
+    <vcpu type="unchanged" id="20">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+        <release_new>
+            <guard_new type="timer">
+                <timer>5000000</timer>
+            </guard_new>
+       </release_new>
+    </vcpu>
+    <vcpu type="new" id="21">
+        <release_new>
+            <guard_new type="time">
+                <timer>5000000</timer>
+            </guard_new>
+        </release_new>
+        <budget>1500000</budget>
+        <period>51000000</period>
+        <criticality>0</criticality>
+    </vcpu>
+    <vcpu type="changed" id="22">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+        </disable_old>
+        <release_new>
+            <guard_new type="timer">
+            <timer>5000000</timer>
+            </guard_new>
+       </release_new>
+       <budget>1500000</budget>
+       <period>49000000</period>
+       <criticality>0</criticality>
+ 
+    </vcpu>
+    <vcpu type="old" id="23">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+    </vcpu>
+    <vcpu type="unchanged" id="24">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+        <release_new>
+            <guard_new type="timer">
+                <timer>5000000</timer>
+            </guard_new>
+       </release_new>
+    </vcpu>
+    <vcpu type="new" id="25">
+        <release_new>
+            <guard_new type="time">
+                <timer>5000000</timer>
+            </guard_new>
+        </release_new>
+        <budget>1500000</budget>
+        <period>50000000</period>
+        <criticality>0</criticality>
+    </vcpu>
+    <vcpu type="changed" id="26">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+        </disable_old>
+        <release_new>
+            <guard_new type="timer">
+            <timer>5000000</timer>
+            </guard_new>
+       </release_new>
+       <budget>1500000</budget>
+       <period>49000000</period>
+       <criticality>0</criticality>
+ 
+    </vcpu>
+    <vcpu type="old" id="27">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+    </vcpu>
+    <vcpu type="unchanged" id="28">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+        <release_new>
+            <guard_new type="timer">
+                <timer>5000000</timer>
+            </guard_new>
+       </release_new>
+    </vcpu>
+    <vcpu type="new" id="29">
+        <release_new>
+            <guard_new type="time">
+                <timer>5000000</timer>
+            </guard_new>
+        </release_new>
+        <budget>1500000</budget>
+        <period>51000000</period>
+        <criticality>0</criticality>
+    </vcpu>
+    <vcpu type="changed" id="30">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+        </disable_old>
+        <release_new>
+            <guard_new type="timer">
+            <timer>5000000</timer>
+            </guard_new>
+       </release_new>
+       <budget>1500000</budget>
+       <period>49000000</period>
+       <criticality>0</criticality>
+ 
+    </vcpu>
+    <vcpu type="old" id="31">
+        <disable_old>
+            <action_running_old>continue</action_running_old>
+            <action_not_running_old>continue</action_not_running_old>
+       </disable_old>
+    </vcpu>
+
 </request>

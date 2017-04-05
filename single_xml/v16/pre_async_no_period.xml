@@ -1,3 +1,4 @@
+<!-- 16 vcpu, (50ms,3ms)-->
 <?xml versdion="1.0"?>
 <request cpu = "3">
     <vcpu type="old" id="1">
@@ -37,54 +38,6 @@
         </disable_old>
     </vcpu>
     <vcpu type="old" id="13">
-        <disable_old>
-            <action_running_old>abort</action_running_old>
-            <action_not_running_old>guard</action_not_running_old>
-            <guard_old type="budget">
-                <timer>1000000000</timer>
-                <time>1000000000</time>
-                <budget type="<=">5000000</budget>
-                <size type=">=">0</size>
-            </guard_old>
-        </disable_old>
-    </vcpu>
-    <vcpu type="old" id="17">
-        <disable_old>
-            <action_running_old>abort</action_running_old>
-            <action_not_running_old>guard</action_not_running_old>
-            <guard_old type="budget">
-                <timer>1000000000</timer>
-                <time>1000000000</time>
-                <budget type="<=">5000000</budget>
-                <size type=">=">0</size>
-            </guard_old>
-        </disable_old>
-    </vcpu>
-    <vcpu type="old" id="21">
-        <disable_old>
-            <action_running_old>abort</action_running_old>
-            <action_not_running_old>guard</action_not_running_old>
-            <guard_old type="budget">
-                <timer>1000000000</timer>
-                <time>1000000000</time>
-                <budget type="<=">5000000</budget>
-                <size type=">=">0</size>
-            </guard_old>
-        </disable_old>
-    </vcpu>
-    <vcpu type="old" id="25">
-        <disable_old>
-            <action_running_old>abort</action_running_old>
-            <action_not_running_old>guard</action_not_running_old>
-            <guard_old type="budget">
-                <timer>1000000000</timer>
-                <time>1000000000</time>
-                <budget type="<=">5000000</budget>
-                <size type=">=">0</size>
-            </guard_old>
-        </disable_old>
-    </vcpu>
-    <vcpu type="old" id="29">
         <disable_old>
             <action_running_old>abort</action_running_old>
             <action_not_running_old>guard</action_not_running_old>
